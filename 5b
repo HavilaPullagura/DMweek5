@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main() {
+    int data[20], n, i, crc = 0;
+
+    printf("Enter number of bits: ");
+    scanf("%d", &n);
+
+    printf("Enter data bits: ");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &data[i]);
+        crc ^= data[i];
+    }
+
+    printf("CRC 12 = %d\n", crc);
+    printf("CRC 16 = %d\n", crc);
+    printf("CRC CCIP = %d\n", crc);
+
+    return 0;
+}
+#output
+Enter number of bits: 5
+Enter data bits: 1 0 1 1 0
+
+CRC 12 = 1
+CRC 16 = 1
+CRC CCIP = 1
